@@ -13,6 +13,7 @@ public class Alquiler {
     private Date fechaAlquiler;
     private boolean novedad;
     private String genero;
+    private String titulo;
 
     public Alquiler(int id, String username, Date fechaAlquiler, boolean novedad, String genero) {
         this.id = id;
@@ -21,6 +22,16 @@ public class Alquiler {
         this.novedad = novedad;
         this.genero = genero;
     }
+
+    public Alquiler(int id, Date fechaAlquiler, boolean novedad, String genero, String titulo) {
+        this.id = id;
+        this.fechaAlquiler = fechaAlquiler;
+        this.novedad = novedad;
+        this.genero = genero;
+        this.titulo = titulo;
+    }
+    
+    
 
     public int getId() {
         return id;
@@ -62,6 +73,15 @@ public class Alquiler {
         this.genero = genero;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    
     @Override
     public String toString() {
         return "Alquiler{" + "id=" + id + ", username=" + username + ", fechaAlquiler=" + fechaAlquiler + ", novedad=" + novedad + ", genero=" + genero + '}';

@@ -43,7 +43,7 @@ public class AlquilerController implements IAlquilerController {
                 boolean novedad = rs.getBoolean("novedad");
                 Date fechaAlquiler = rs.getDate("fecha");
 
-                Alquiler alquiler = new Alquiler(id, titulo, fechaAlquiler, novedad, genero);
+                Alquiler alquiler = new Alquiler(id, fechaAlquiler, novedad, genero, titulo);
 
                 alquileres.add(gson.toJson(alquiler));
             }
